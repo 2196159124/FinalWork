@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="352dp"
+        android:layout_height="401dp"
+        android:layout_above="@+id/exit"
+        android:layout_below="@+id/show_username"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="36dp" />
+
+    <TextView
+        android:id="@+id/user_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="146dp"
+        android:gravity="center"
+        android:text="欢迎用户"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/show_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_now"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:text="USERNAME"
+        android:textSize="30dp" />
+
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="37dp"
+        android:drawable="@drawable/btn_shape"
+        android:onClick="exit"
+        android:text="退出登录"
+        android:textSize="25dp"
+        app:iconTint="#F30808" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/purple_500"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/mymenu" />
+</RelativeLayout>
